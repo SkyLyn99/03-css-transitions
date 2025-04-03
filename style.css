@@ -17,6 +17,13 @@ h1 {
   font-size: 42px;
   margin-bottom: 0;
   text-align: center;
+  transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+h1:hover {
+  color: #775047;  /* Darker brown on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 60px;
 }
 
 .description {
@@ -47,6 +54,12 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   outline: 2px solid #775047;
+  transition: transform 0.3s ease-in-out; /* Smooth scale-up transition */
+}
+
+.card:hover,
+.card:focus {
+  transform: scale(1.05); /* Slightly scale up the card */
 }
 
 /* Card image style */
@@ -65,5 +78,12 @@ h1 {
   right: 0;
   background: rgba(62, 39, 35, 0.85);  /* Warm dark overlay */
   color: #FDF6E3;  /* Light text for contrast */
+  opacity: 0;
   padding: 0 12px;
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in transition */
+}
+
+.card:hover .card-text,
+.card:focus .card-text {
+  opacity: 1; /* Make the text visible on hover or focus */
 }
